@@ -1,0 +1,71 @@
+//Instalacja
+
+sudo apt-get update
+sudo apt-get install apache2
+
+//Obsługa
+
+sudo /etc/init.d/apache2 stop   //zatrzymanie apachace
+sudo /etc/init.d/apache2 start   //rozpoczęcie apachace
+sudo /etc/init.d/apache2 restart  //restart apachace
+
+
+//
+cd /var/www/html    //wejście w folder gdzie znajduje się przykładowy html
+cd /var/ww/html sudo nano index.html // otworzy w konsoli plik index.html i moge go tam edytowac
+sudo mkdir katalog_1//dodanie katalogu ( z poziomu root)
+sudo rmdir katalog_1//usuniecie katalogu
+
+apt-cache showpkg nazwa-pakietu //określa numer zainstalowanej wersji
+
+
+
+//usuniecie katalogu z zawartoscia 
+rm -r nazwa_katalogu
+
+
+//instalacja Symfony
+http://symfony2-docs-pl.readthedocs.io/pl/latest/book/installation.html
+
+ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+ sudo chmod a+x /usr/local/bin/symfony
+
+//utworzenie nowego projektu
+symfony new my_project_nam
+
+//utworzenie nowego projektu symfony przy użyciu Composer'a 
+composer create-project symfony/framework-standard-edition my_project_name
+
+//uruchomienie symfony ( w katalogu w którym utworzyliśmy projekt, uruchamia to serwer internetowy)
+php bin/console server:run
+//wyłączenie symfony
+php bin/console server:stop
+
+
+//sprawdzenie konfiguracji ustawien
+http://localhost:8000/config.php
+
+
+Przydatne linki:: 
+
+http://www.gabo.hi.pl/linux/polecenia.htm
+http://www.arturpyszczuk.pl/lamp.html
+http://blog.pgkomp.pl/instalacja-linux-apache-mysql-php-lamp-systemie-ubuntu-server-16-04-lts/
+http://symfony.com/doc/current/setup.html
+http://knpuniversity.com/screencast/symfony
+http://symfony2-docs-pl.readthedocs.io/pl/latest/best_practices/creating-the-project.html
+http://symfony2-docs-pl.readthedocs.io/pl/latest/book/installation.html
+
+Docker:
+https://docs.docker.com/engine/installation/linux/ubuntu/
+https://docs.docker.com/engine/installation/linux/linux-postinstall/#manage-docker-as-a-non-root-user
+https://docs.docker.com/engine/userguide/
+https://docs.docker.com/get-started/
+https://docs.docker.com/engine/reference/builder/#format
+
+http://www.blog.ravns.net/tag/instalacja-interpretera-php/
+https://www.youtube.com/watch?v=p6aRx8kmZwM
+https://www.youtube.com/watch?v=Ejr4Xqs9V2I
+https://www.youtube.com/watch?v=_HeA_I3KDFg&t=210s
+
+

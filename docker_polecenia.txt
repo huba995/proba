@@ -1,0 +1,12 @@
+//Uruchomienie kontenera mysql
+docker run --name mysql55 -v mysql55:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=bartek -d -p 127.0.0.1:3306:3306 mysql:5.5
+
+//
+docker run -d -p 9008:80 --privileged -v /home/bartek/source/project/:/var/www/html -i -t --name PROJECT_NAME --link mysql55:db NAME
+
+
+//W celu uzyskania dostępu do strumieni wejścia i wyjścia powłoki polecenie docker exec należy wywołać z  
+//opcjami -i -t.
+
+docker exec -it [id lub nazwa kontenera] bash
+

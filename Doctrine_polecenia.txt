@@ -1,0 +1,31 @@
+php bin/console doctrine:database:create
+
+//generowanie metod akcesorów
+php bin/console doctrine:generate:entities AppBundle/Entity/Product
+
+//utowrzenie tabeli w bazie danych
+ php bin/console doctrine:schema:update --force
+
+
+// tak można tez utworzyć tabele od razu ( recipes)
+php bin/console doctrine:generate:entity --no-interaction \
+--entity="AppBundle:Recipes" \
+--fields="name_recipe:string(255) description:text created_add:datetime mydisplay:boolean plus:integer minus:integer"
+
+//tabela "ingredients"
+php bin/console doctrine:generate:entity --no-interaction \
+--entity="AppBundle:Ingredients" \
+--fields="name_ingredient:string(255)"
+
+//tabela "comments"
+php bin/console doctrine:generate:entity --no-interaction \
+--entity="AppBundle:Comments" \
+--fields="comment:text created_add:datetime"
+
+//tabela "tags"
+php bin/console doctrine:generate:entity --no-interaction \
+--entity="AppBundle:Tags" \
+--fields="tag:string(length=255 unique=true)"
+
+
+
